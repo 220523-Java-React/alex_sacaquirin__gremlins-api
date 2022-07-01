@@ -15,7 +15,6 @@ public class GremlinRepository implements DAO<Gremlin> {
     public Gremlin create(Gremlin gremlin) {
         String sql = "insert into gremlins(name, age, color, isEvil) values(?,?,?,?)";
 
-        // try with resources to auto close connection
         try(Connection connection = ConnectionUtility.getInstance()) {
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, gremlin.getName());
