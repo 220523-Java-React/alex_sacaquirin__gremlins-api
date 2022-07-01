@@ -47,7 +47,7 @@ public class GremlinRepository implements DAO<Gremlin> {
                         .setName(rs.getString("name"))
                         .setColor(rs.getNString("color"))
                         .setAge(rs.getInt("age"))
-                        .setEvil(rs.getBoolean("is_Evil")));
+                        .setEvil(rs.getBoolean("isEvil")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
